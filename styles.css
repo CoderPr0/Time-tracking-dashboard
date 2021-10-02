@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    color: hsl(0, 0%, 100%);
+}
+
+main {
+    position: relative;
+    max-width: 1090px;
+    width: 90%;
+    margin: 100px auto;
+}
+
+
+/* ----profile---- */
+.profile {
+    position: absolute;
+    background-color: hsl(246, 80%, 60%);
+    width: 23%;
+    height: 360px;
+    padding: 3%;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.profile > img {
+    width: 90px;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.profile > p {
+    color: hsl(195, 74%, 62%);
+}
+
+.profile > h1 {
+    font-weight: 300;
+}
+
+main ul {
+    background-color: hsl(235, 46%, 20%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 23%;
+    height: 210px;
+    padding: 60px 3% 0;
+    border-radius: 20px;
+    top: 330px;
+    z-index: 1;
+}
+
+li {
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
+
+li:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+.active {
+    color: hsl(0, 0%, 100%);
+}
+
+
+/* ----activities---- */
+.activities {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 70px;
+    width: 75%;
+    top: 50px;
+    right: 0;
+}
+
+.activity {
+    background-color: hsl(235, 46%, 20%);
+    height: 210px;
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.activity:hover {
+    background-color: hsl(235, 46%, 28%);
+}
+
+.title > h1 {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 36px;
+}
+
+.title > img {
+    float: right;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.current {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.previous {
+    color: hsl(236, 100%, 87%);
+}
+
+
+/* ----activities backgrounds---- */
+.activities-bg {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 70px;
+    width: 75%;
+    right: 0;
+}
+
+.background {
+    height: 210px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.background > img {
+    padding-right: 20px;
+    float: right;
+}
+
+
+/* --individual backgrounds-- */
+.work-background {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play-background {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study-background {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise-background {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social-background {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.self-care-background {
+    background-color: hsl(43, 84%, 65%);
+}
+
+
+
+
+/* --------------smaller screens: 920px>740px>-------------- */
+@media (max-width: 920px) {
+    /* ----profile--- */
+    .profile {
+        height: 315px;
+    }
+    main ul {
+        top: 270px;
+    }
+
+    /* ----activities---- */
+    .activities {
+        row-gap: 70px;
+    }
+    .activity {
+        height: 180px;
+        padding: 30px 20px;
+    }
+    .title > h1 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .title > img {
+        margin-top: 8px;
+    }
+    .current {
+        font-size: 42px;
+        margin-bottom: 8px;
+    }
+    .previous {
+        font-size: 14px;
+    }
+
+    /* ----activities backgrounds---- */
+    .activities-bg {
+        row-gap: 75px;
+    }
+    .background {
+        height: 180px;
+    }
+}
+
+@media(max-width: 760px) {
+    main {
+        height: 1580px;
+    }
+
+    /* ----profile---- */
+    .profile {
+        display: grid;
+        grid-template-columns: 90px 228px;
+        grid-template-rows: 35px 55px;
+        column-gap: 10px;
+        width: 100%;
+        height: 160px;
+        justify-content: center;
+        padding: 35px 0;
+    }
+    .profile > img {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-right: 10px
+    }
+    .profile > p {
+        margin: auto 20px 0 0;
+    }
+    main ul {
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        top: 120px;
+        padding-top: 60px;
+    }
+    li {
+        margin: 0 auto;
+    }
+
+    /* ----activities---- */
+    .activities {
+        grid-template-columns: 1fr;
+        width: 100%;
+        top: 290px;
+    }
+    .activity {
+        height: 150px;
+        padding: 30px 50px;
+    }
+    .title > h1 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    .current, .previous {
+        display: inline;
+    }
+    .previous {
+        float: right;
+        margin-top: 20px;
+    }
+
+    /* ----activities backgrounds---- */
+    .activities-bg {
+        grid-template-columns: 1fr;
+        row-gap: 70px;
+        width: 100%;
+        top: 250px;
+    }
+    .background {
+        height: 150px;
+    }
+}
